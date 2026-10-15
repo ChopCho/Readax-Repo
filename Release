@@ -1,0 +1,8 @@
+Origin: Readax Repo
+Label: Readax
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm
+Components: main
+Description: Official APT repository for Readax manga reader on legacy 32-bit iOS devices (iPhone 5, iOS 10.3.4).

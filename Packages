@@ -1,0 +1,15 @@
+Package: com.aidokulegacy.app
+Version: 0.1.0
+Architecture: iphoneos-arm
+Maintainer: Aidoku Legacy Team
+Installed-Size: 192
+Filename: debs/com.aidokulegacy.app_0.1.0_iphoneos-arm.deb
+Size: 49280
+MD5sum: c73e6581832055de75708dede8c3d59a
+SHA1: 689cb8fe4cc91bf6f8f07c0ef91405d371f83f24
+SHA256: eccda89224624d235772e1b2a9eb018616c26e8883c3698a1e2556599d70b329
+Section: Applications
+Description: Lightweight manga reader for legacy 32-bit iOS devices
+Author: Aidoku Legacy Team
+Name: Aidoku Legacy
+

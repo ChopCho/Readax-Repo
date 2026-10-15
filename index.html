@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Readax APT Repository</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #38bdf8;
+      --accent-hover: #0ea5e9;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --border-color: #334155;
+      --code-bg: #090d16;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 640px;
+      width: 100%;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .icon-wrapper {
+      width: 84px;
+      height: 84px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.3);
+      overflow: hidden;
+    }
+    .icon-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    }
+    .card h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      margin: 16px 0;
+      flex-wrap: wrap;
+    }
+    .btn {
+      flex: 1;
+      min-width: 140px;
+      background-color: var(--accent);
+      color: #0f172a;
+      text-align: center;
+      padding: 12px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background-color 0.2s, transform 0.1s;
+      display: inline-block;
+    }
+    .btn:hover {
+      background-color: var(--accent-hover);
+    }
+    .btn-secondary {
+      background-color: #334155;
+      color: var(--text-primary);
+    }
+    .btn-secondary:hover {
+      background-color: #475569;
+    }
+    .code-box {
+      background-color: var(--code-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
+      color: #38bdf8;
+      word-break: break-all;
+      margin-top: 8px;
+      user-select: all;
+    }
+    ul, ol {
+      padding-left: 20px;
+      margin: 10px 0;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      background-color: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 12px;
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="icon-wrapper">
+        <img src="CydiaIcon.png" alt="Readax Icon" onerror="this.style.display='none'">
+      </div>
+      <h1>Readax Repository</h1>
+      <p class="subtitle">Repositori APT Resmi untuk Manga Reader Readax (iOS 10.3.4 ARMv7)</p>
+    </header>
+
+    <div class="card">
+      <h2>⚡ Tambahkan ke Package Manager</h2>
+      <p style="font-size: 14px; color: var(--text-secondary);">
+        Jika Anda membuka halaman ini langsung dari iPhone/iPad jailbreak, ketuk tombol di bawah untuk menambahkan repositori secara otomatis:
+      </p>
+      <div class="btn-group">
+        <a class="btn" href="zbra://sources/add/https%3A%2F%2Fchopcho.github.io%2FReadax-Repo%2F" id="zebraBtn">Add to Zebra</a>
+        <a class="btn btn-secondary" href="cydia://url/mobile/add/package/https%3A%2F%2Fchopcho.github.io%2FReadax-Repo%2F" id="cydiaBtn">Add to Cydia</a>
+      </div>
+      <p style="font-size: 13px; color: var(--text-secondary); margin-top: 12px;">
+        Atau salin URL repositori ini secara manual:
+      </p>
+      <div class="code-box" id="repoUrlBox">https://chopcho.github.io/Readax-Repo/</div>
+    </div>
+
+    <div class="card">
+      <h2>📦 Paket yang Tersedia</h2>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+        <strong style="font-size: 16px;">Aidoku Legacy (Readax)</strong>
+        <span class="badge">v0.1.0</span>
+      </div>
+      <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 12px;">
+        Manga reader ringan dan cepat untuk perangkat lawas 32-bit (iPhone 5, iOS 10.3.4). 100% offline-first, tanpa akun, tanpa pelacakan data.
+      </p>
+      <ul>
+        <li><strong>Arsitektur:</strong> <code>iphoneos-arm</code> (32-bit ARMv7)</li>
+        <li><strong>Kompatibilitas:</strong> iOS 10.0 hingga iOS 10.3.4 (Rootful Jailbreak)</li>
+        <li><strong>Fitur:</strong> Library manga demo, pembaca interaktif, zoom, auto-save progres bacaan berbasis SQLite, dan tab Riwayat baca.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>📖 Panduan Instalasi Manual</h2>
+      <ol>
+        <li>Buka aplikasi <strong>Zebra</strong> atau <strong>Cydia</strong> di perangkat iPhone 5 Anda.</li>
+        <li>Pilih tab <strong>Sources</strong> (Sumber) lalu ketuk <strong>Edit > Add</strong> (Tambah).</li>
+        <li>Masukkan URL repositori di atas dan ketuk <strong>Add Source</strong>.</li>
+        <li>Tunggu hingga pembaruan sumber selesai, lalu cari paket <strong>"Aidoku Legacy"</strong> dan ketuk <strong>Install</strong>.</li>
+      </ol>
+    </div>
+
+    <footer>
+      <p>Readax APT Repository &bull; Dibuat khusus untuk pelestarian perangkat iOS lawas.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Secara otomatis mengisi URL aktual jika diakses via HTTPS GitHub Pages
+    if (window.location.protocol.startsWith('http')) {
+      var currentUrl = window.location.href.split('?')[0].split('#')[0];
+      if (!currentUrl.endsWith('/')) {
+        currentUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/') + 1);
+      }
+      document.getElementById('repoUrlBox').textContent = currentUrl;
+      document.getElementById('zebraBtn').href = 'zbra://sources/add/' + encodeURIComponent(currentUrl);
+      document.getElementById('cydiaBtn').href = 'cydia://url/mobile/add/package/' + encodeURIComponent(currentUrl);
+    }
+  </script>
+</body>
+</html>
